@@ -1,9 +1,11 @@
 // server.js
 const express = require('express');
 const fetch = require('node-fetch');
+const cors = require('cors');
 const app = express();
 const port = 3001; // Порт для вашего сервера
 
+app.use(cors());
 // Разрешить CORS для всех доменов
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
